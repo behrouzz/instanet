@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="instanet",
-    version="0.0.2",
+    version="0.0.3",
     author="Behrouz Safari",
     author_email="behrouz.safari@gmail.com",
     description="A python package for analysing Instagram network",
@@ -20,7 +20,6 @@ setuptools.setup(
     ],
     packages=["instanet"],
     include_package_data=True,
-    package_data={'': ['*.bs']},
     install_requires=["requests", "networkx", "matplotlib"],
     python_requires='>=3.4',
 )

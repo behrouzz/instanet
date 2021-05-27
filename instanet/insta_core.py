@@ -1,4 +1,5 @@
 ﻿import uuid, hashlib, requests, json, hmac, urllib, base64
+from .bs_settings import b
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
@@ -8,8 +9,7 @@ def decode(string_b64):
     string_byt = base64.b64decode(string_b64_byt)
     return string_byt.decode("ascii")
 
-with open('settings.bs', 'r') as f:
-    b = f.read()[::-1].split('.')
+b = b[::-1].split('.')
 
 API_URL = decode(b[0])
 USER_AGENT = decode(b[1])
